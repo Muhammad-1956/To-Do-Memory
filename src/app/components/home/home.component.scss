@@ -1,0 +1,37 @@
+.center{
+  display: flex;
+  justify-content: center;
+  button{
+    padding: 15px 30px;
+    color: #bddaf8;
+    background-color: #1e3d59;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  p, button{
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  h2{
+    cursor: pointer;
+    &:hover{
+      color: rgb(54, 129, 204);
+    }
+  }
+}
+.container{
+  a{
+    width: 70%;
+  }
+  .card-body{
+    min-height: 300px;
+  }
+}
+
+// .card-body{
+//   background-image: 'D:/project1/memories/src/assets/memo.jpg';
+// }
+
+

@@ -1,0 +1,24 @@
+<div class="center">
+  <button (click)="navigate()">Add New Memory</button>
+</div>
+<hr>
+<div class="center" *ngIf="Isempty()" else memories>
+  <p class="text-capitalize">Ooops, there is no memories for you.</p>
+</div>
+<div class="container" #memories>
+  <h2 class="text-center text-uppercase mt-4 mb-4">;) memories ;)</h2>
+  <div class="d-flex flex-start gap-2 flex-wrap">
+    <div  *ngFor="let memory of this.new_memories; index as i" class="card text-center mb-1" style="width: 18rem;">
+      <div class="card-body d-flex flex-column justify-content-around">
+        <div class="text">
+          <h5 class="card-title text-uppercase">{{memory.title}}</h5>
+          <p class="card-text">{{memory.description}}</p>
+        </div>
+        <div class="view">
+          <a class="w-100" [routerLink]="['/memory',i]" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
